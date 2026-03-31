@@ -5,155 +5,234 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Primary Meta Tags -->
-  <meta name="title" content="FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding - Yang et al.">
+  <meta name="title" content="FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding - Chen et al.">
   <meta name="description" content="FOVEA-GUI introduces a dynamic high-resolution allocation framework for GUI grounding. It selectively requests fine-grained visual evidence to balance efficiency and accuracy, reducing visual token costs without compromising performance.">
   <meta name="keywords" content="FOVEA-GUI, GUI grounding, foveated visual processing, adaptive resolution, vision-language models, reinforcement learning, visual efficiency, multimodal AI, computer vision">
   <meta name="author" content="Jingfan Chen, Lin Wang, Qing Li">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="The Hong Kong Polythechnic University">
+  <meta property="og:site_name" content="The Hong Kong Polytechnic University">
   <meta property="og:title" content="FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding">
   <meta property="og:description" content="A dynamic high-resolution budget allocation framework that selectively acquires visual evidence for efficient GUI grounding.">
   <meta property="og:url" content="https://github.com/WANGLin0126/FOVEA-GUI/">
-  <meta property="og:image" content="https://yourlab.github.io/fovea-gui/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image" content="static/images/social_preview.png">
   <meta property="og:image:alt" content="FOVEA-GUI - Research Preview">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@yourlab">
-  <meta name="twitter:creator" content="@yanyang_ml">
-  <meta name="twitter:title" content="FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding">
-  <meta name="twitter:description" content="Adaptive visual evidence acquisition improves GUI grounding efficiency while maintaining accuracy.">
-  <meta name="twitter:image" content="https://yourlab.github.io/fovea-gui/static/images/social_preview.png">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding">
-  <meta name="citation_author" content="Jingfan Chen">
-  <meta name="citation_author" content="Lin Wang">
-  <meta name="citation_author" content="Qing Li">
-  <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="ACM MM 2026 (under review)">
-  <meta name="citation_pdf_url" content="https://github.com/WANGLin0126/FOVEA-GUI/">
-  
   <meta name="theme-color" content="#2563eb">
-  <title>FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding | CUAI Lab</title>
+  <title>FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding</title>
 
-  <!-- Favicon and CSS -->
+  <!-- CSS -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
 </head>
 
 <body>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop has-text-centered">
-      <h1 class="title is-1 publication-title">FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding</h1>
+<!-- 🔹 1️⃣ Navbar -->
+<nav class="navbar is-fixed-top is-white has-shadow">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-semibold" href="#">FOVEA-GUI</a>
+      <a role="button" class="navbar-burger" data-target="navMenu">
+        <span></span><span></span><span></span>
+      </a>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#Abstract">Abstract</a>
+        <a class="navbar-item" href="#Method">Method</a>
+        <a class="navbar-item" href="#Results">Results</a>
+        <a class="navbar-item" href="#Resources">Resources</a>
+        <a class="navbar-item" href="#Team">Team</a>
+        <a class="navbar-item" href="#BibTeX">BibTeX</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- 🔹 2️⃣ Hero Section -->
+<section class="hero is-medium is-light">
+  <div class="hero-body has-text-centered">
+    <div class="container is-max-desktop">
+      <h1 class="title is-1">FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding</h1>
       <h2 class="subtitle is-4">Adaptive high-resolution budget allocation for efficient GUI grounding</h2>
 
-      <div class="is-size-5 publication-authors">
+      <p class="is-size-5">
         <a href="#">Jingfan Chen</a>, 
         <a href="#">Lin Wang</a>, 
-        <a href="#">Qing Li</a>.
-        <!-- <br><small><sup>*</sup>Equal Contribution</small> -->
-      </div>
+        <a href="#">Qing Li</a><br>
+        <span>The Hong Kong Polytechnic University</span><br>
+        <span class="has-text-grey">Under Review at <em>ACM MM 2026</em></span>
+      </p>
 
-      <div class="is-size-5 publication-authors">
-        The Hong Kong polythechnic University<br>Under Review at ACM MM 2026
-      </div>
-
-      <div class="publication-links">
-        <a class="button is-rounded is-dark external-link" href="static/pdfs/fovea_gui.pdf"><i class="fas fa-file-pdf"></i>&nbsp;Paper</a>
-        <a class="button is-rounded is-dark external-link" href="https://arxiv.org/abs/XXXX.XXXXX"><i class="ai ai-arxiv"></i>&nbsp;arXiv</a>
-        <a class="button is-rounded is-dark external-link" href="https://github.com/yourlab/fovea-gui"><i class="fab fa-github"></i>&nbsp;Code</a>
-        <a class="button is-rounded is-dark external-link" href="static/pdfs/poster.pdf"><i class="fas fa-image"></i>&nbsp;Poster</a>
+      <div class="buttons is-centered mt-4">
+        <a class="button is-dark is-rounded" href="static/pdfs/fovea_gui.pdf">
+          <i class="fas fa-file-pdf"></i>&nbsp;Paper
+        </a>
+        <a class="button is-dark is-rounded" href="https://arxiv.org/abs/XXXX.XXXXX">
+          <i class="ai ai-arxiv"></i>&nbsp;arXiv
+        </a>
+        <a class="button is-dark is-rounded" href="https://github.com/WANGLin0126/FOVEA-GUI">
+          <i class="fab fa-github"></i>&nbsp;Code
+        </a>
+        <a class="button is-dark is-rounded" href="static/pdfs/poster.pdf">
+          <i class="fas fa-image"></i>&nbsp;Poster
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Teaser -->
-<section class="hero teaser is-light">
+<!-- 🔹 3️⃣ Teaser Section -->
+<section class="hero teaser is-white">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <video autoplay muted loop controls preload="metadata">
+      <video autoplay muted loop controls preload="metadata" class="teaser-video">
         <source src="static/videos/teaser.mp4" type="video/mp4">
       </video>
-      <p class="subtitle has-text-centered">
-        FOVEA-GUI dynamically allocates high-resolution budget for efficient GUI grounding. The model zooms into critical regions only when fine-grained details are necessary.
+      <p class="subtitle has-text-centered mt-3">
+        FOVEA-GUI dynamically allocates high-resolution budget for efficient GUI grounding. 
+        The model zooms into critical regions only when fine-grained details are necessary.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Abstract -->
-<section class="section hero is-white">
+<!-- 🔹 4️⃣ Abstract -->
+<section id="Abstract" class="section">
   <div class="container is-max-desktop">
-    <div class="has-text-centered">
-      <h2 class="title is-3">Abstract</h2>
-    </div>
+    <h2 class="title is-3 has-text-centered">Abstract</h2>
     <div class="content has-text-justified">
       <p>
-        Graphical User Interface (GUI) grounding requires precise identification of interface elements from high-resolution screenshots, but this imposes heavy visual token costs on large vision–language models.
+        Graphical User Interface (GUI) grounding requires precise identification of interface elements from high-resolution screenshots, 
+        but this imposes heavy visual token costs on large vision–language models.
         We propose <strong>FOVEA-GUI</strong>, a dynamic high-resolution allocation framework that selectively acquires fine-grained evidence only when necessary.
         The agent first reasons over a low-resolution global view, invoking a zoom-in tool for localized high-resolution crops when more detail is required.
-        Trained with reinforcement learning and a balanced reward design, FOVEA-GUI learns adaptive visual evidence acquisition, achieving strong grounding accuracy while reducing visual token costs by over 50%.
+        Trained with reinforcement learning and a balanced reward design, FOVEA-GUI learns adaptive visual evidence acquisition, achieving strong grounding accuracy 
+        while reducing visual token costs by over 50%.
         Experiments on multiple GUI benchmarks (ScreenSpot-V2, OSWorld-G, UI-Vision, and MMBench-GUI) demonstrate state-of-the-art efficiency–accuracy trade-offs for grounding tasks.
       </p>
     </div>
   </div>
 </section>
 
-<!-- Image Carousel -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="carousel results-carousel">
-        <div class="item">
-          <img src="static/images/fovea_concept.png" alt="Foveated visual acquisition framework">
-          <p class="has-text-centered">Overview of FOVEA-GUI: Agent selectively requests high-resolution regions guided by low-res reasoning.</p>
-        </div>
-        <div class="item">
-          <img src="static/images/comparison_chart.png" alt="Efficiency comparison">
-          <p class="has-text-centered">FOVEA-GUI achieves 40–60% reduction in visual tokens while maintaining competitive accuracy.</p>
-        </div>
-        <div class="item">
-          <img src="static/images/case_study.png" alt="Visual case study">
-          <p class="has-text-centered">Case study: successful zoom-in on a tiny button in a dense desktop interface.</p>
-        </div>
+<!-- 🔹 5️⃣ Method -->
+<section id="Method" class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method</h2>
+    <div class="columns is-vcentered">
+      <div class="column">
+        <p>
+          Our <strong>FOVEA-GUI</strong> framework mimics the human visual foveation mechanism. The model begins with a low-resolution global perception
+          and selectively zooms in on visually ambiguous regions using a trained zoom-in policy.
+          Through <strong>reinforcement learning</strong>, the system learns when and where high-resolution patches are necessary, thus
+          optimizing accuracy-efficiency trade-offs across heterogeneous GUIs.
+        </p>
+      </div>
+      <div class="column">
+        <figure>
+          <img src="static/images/method_diagram.png" alt="FOVEA-GUI Method Diagram">
+          <figcaption class="has-text-centered mt-2">Figure: Overall pipeline of the FOVEA-GUI framework.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BibTeX Section -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{Chen2025FOVEA,
+<!-- 🔹 6️⃣ Results -->
+<section id="Results" class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <div class="carousel results-carousel">
+      <div class="item">
+        <img src="static/images/fovea_concept.png" alt="Foveated visual acquisition framework">
+        <p class="has-text-centered">Overview of adaptive high-resolution selection guided by context cues.</p>
+      </div>
+      <div class="item">
+        <img src="static/images/comparison_chart.png" alt="Efficiency comparison">
+        <p class="has-text-centered">FOVEA-GUI achieves up to 60% token reduction while preserving SOTA accuracy.</p>
+      </div>
+      <div class="item">
+        <img src="static/images/case_study.png" alt="Case study">
+        <p class="has-text-centered">Example: Adaptive zoom-on small UI buttons improves grounding precision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 7️⃣ Resources -->
+<section id="Resources" class="section is-light">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Resources</h2>
+    <div class="columns is-multiline mt-4">
+      <div class="column is-one-third">
+        <a href="static/pdfs/fovea_gui.pdf" class="box"><i class="fas fa-file-pdf fa-2x"></i><br><strong>Paper</strong></a>
+      </div>
+      <div class="column is-one-third">
+        <a href="https://github.com/WANGLin0126/FOVEA-GUI" class="box"><i class="fab fa-github fa-2x"></i><br><strong>Code</strong></a>
+      </div>
+      <div class="column is-one-third">
+        <a href="static/pdfs/poster.pdf" class="box"><i class="fas fa-image fa-2x"></i><br><strong>Poster</strong></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 8️⃣ Team / Acknowledgment -->
+<section id="Team" class="section">
+  <div class="container is-max-desktop has-text-centered">
+    <h2 class="title is-3">Team & Acknowledgment</h2>
+    <p>
+      <strong>Authors:</strong> Jingfan Chen, Lin Wang, Qing Li<br>
+      <strong>Institution:</strong> The Hong Kong Polytechnic University<br>
+      Supported by PolyU AI Lab and HK Innovation Fund.
+    </p>
+  </div>
+</section>
+
+<!-- 🔹 9️⃣ BibTeX -->
+<section id="BibTeX" class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@article{Chen2026FOVEA,
   title={FOVEA-GUI: Foveated On-demand Visual Evidence Acquisition for GUI Grounding},
-  author={Jingfan Chen, Lin Wang and Qing Li},
+  author={Jingfan Chen and Lin Wang and Qing Li},
+  journal={ACM Multimedia},
   year={2026},
+  url={https://github.com/WANGLin0126/FOVEA-GUI}
 }</code></pre>
   </div>
 </section>
 
+<!-- 🔹 10️⃣ Footer -->
 <footer class="footer">
   <div class="content has-text-centered">
-    <p>This page is built upon the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
-    <p>© 2026 The Hong Kong Polytechnic University | Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+    <p>
+      This page is built upon the 
+      <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> 
+      adapted from <a href="https://nerfies.github.io/">Nerfies</a>.
+    </p>
+    <p>
+      © 2026 The Hong Kong Polytechnic University | Licensed under 
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+    </p>
   </div>
 </footer>
 
+<script>
+  // Navbar burger toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.navbar-burger');
+    const menu = document.getElementById(burger.dataset.target);
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+    });
+  });
+</script>
 </body>
 </html>
