@@ -120,45 +120,60 @@
   </div>
 </section>
 
-<!-- 🔹 5️⃣ Method -->
+<!-- 🔹 Method -->
 <section id="Method" class="section is-light">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Method</h2>
+
     <div class="columns is-vcentered">
-      <div class="column">
-        <p>
-          Our <strong>FOVEA-GUI</strong> framework mimics the human visual foveation mechanism. The model begins with a low-resolution global perception
-          and selectively zooms in on visually ambiguous regions using a trained zoom-in policy.
-          Through <strong>reinforcement learning</strong>, the system learns when and where high-resolution patches are necessary, thus
-          optimizing accuracy-efficiency trade-offs across heterogeneous GUIs.
-        </p>
-      </div>
-      <div class="column">
+      <div class="column is-half">
         <figure>
-          <img src="static/images/method_diagram.png" alt="FOVEA-GUI Method Diagram">
-          <figcaption class="has-text-centered mt-2">Figure: Overall pipeline of the FOVEA-GUI framework.</figcaption>
+          <img src="static/images/method_diagram.png" alt="FOVEA-GUI Method Overview">
+          <figcaption class="has-text-centered mt-2">
+            Overview: FOVEA-GUI processes a low-resolution input, selectively zooms into target regions for high-resolution reasoning.
+          </figcaption>
         </figure>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            <strong>FOVEA-GUI</strong> imitates the human eye’s selective focus mechanism for visual grounding. The system first analyzes a <strong>low-resolution global view</strong> and decides whether to <strong>invoke the zoom-in tool</strong> to acquire high-resolution evidence.
+          </p>
+          <p>
+            It is trained under a <strong>reinforcement learning framework</strong> comprising:
+            <ul>
+              <li><strong>Outcome Reward</strong> — evaluates prediction accuracy and balances direct vs. zoom-based grounding.</li>
+              <li><strong>Tool Reward</strong> — gives localized feedback for precise zoom region selection.</li>
+            </ul>
+          </p>
+          <p>
+            Training includes two stages: pretraining for tool recognition, followed by RL fine-tuning for adaptive policy learning. A curated dataset from <em>GroundCUA</em> and <em>GTA-1</em> ensures balanced exposure to both tool-free and tool-required GUI cases.
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 🔹 6️⃣ Results -->
+<!-- 🔹 Results -->
 <section id="Results" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Results</h2>
-    <div class="carousel results-carousel">
-      <div class="item">
-        <img src="static/images/fovea_concept.png" alt="Foveated visual acquisition framework">
-        <p class="has-text-centered">Overview of adaptive high-resolution selection guided by context cues.</p>
+    <div class="columns is-multiline">
+      <div class="column is-one-third">
+        <figure><img src="static/images/fovea_concept.png" alt="Foveation Concept">
+          <figcaption class="has-text-centered">Adaptive attention allocation in GUI regions.</figcaption>
+        </figure>
       </div>
-      <div class="item">
-        <img src="static/images/comparison_chart.png" alt="Efficiency comparison">
-        <p class="has-text-centered">FOVEA-GUI achieves up to 60% token reduction while preserving SOTA accuracy.</p>
+      <div class="column is-one-third">
+        <figure><img src="static/images/comparison_chart.png" alt="Efficiency Results">
+          <figcaption class="has-text-centered">Up to 60% fewer visual tokens with maintained accuracy.</figcaption>
+        </figure>
       </div>
-      <div class="item">
-        <img src="static/images/case_study.png" alt="Case study">
-        <p class="has-text-centered">Example: Adaptive zoom-on small UI buttons improves grounding precision.</p>
+      <div class="column is-one-third">
+        <figure><img src="static/images/case_study.png" alt="Case Study">
+          <figcaption class="has-text-centered">Case study: correctly grounding tiny UI buttons.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
