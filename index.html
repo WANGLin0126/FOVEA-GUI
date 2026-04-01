@@ -213,6 +213,95 @@
   </div>
 </section>
 
+
+<!-- Analysis -->
+<section id="Analysis" class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Analysis</h2>
+
+    <div class="content has-text-justified">
+      <p>
+        We further examine how <strong>FOVEA‑GUI</strong> dynamically leverages its zoom‑in tool across GUI grounding scenarios to balance 
+        visual precision and efficiency.
+      </p>
+      <p>
+        <strong>Tool‑Use Adaptivity.</strong> 
+        As shown below, FOVEA‑GUI invokes the zoom‑in tool more frequently on high‑resolution, fine‑grained benchmarks 
+        such as <em>ScreenSpot‑Pro</em> and <em>OSWorld‑G</em>, where the model needs to interpret tiny widgets, icons, and dense text. 
+        On comparatively coarse layouts such as <em>ScreenSpot‑V2</em>, it often answers directly, indicating effective adaptive control over 
+        high‑resolution acquisition.
+      </p>
+      <figure class="has-text-centered">
+        <img src="static/images/tool_call_ratio.png" alt="Tool Call Ratio across Benchmarks" style="max-width:85%;">
+        <figcaption>Figure: Tool‑use frequency across benchmarks, reflecting adaptive strategy of FOVEA‑GUI.</figcaption>
+      </figure>
+
+      <p>
+        <strong>Toolflow Ablation.</strong> 
+        We analyze the influence of crop region size in the zoom‑in pipeline on the <em>ScreenSpot‑Pro</em> benchmark.
+        A moderate region size (<code>1/4</code> of the original area) achieves the best accuracy, while smaller crops (<code>1/16</code>) 
+        remove important context, causing the model to fallback to direct answering with degraded performance.
+      </p>
+
+      <table class="table is-striped is-bordered is-fullwidth has-text-centered">
+        <thead>
+          <tr>
+            <th>Methods</th>
+            <th>ScreenSpot‑Pro</th>
+            <th>Δ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FOVEA‑GUI (crop region 1/4)</td>
+            <td>39.3</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>FOVEA‑GUI w/o crop (full‑res)</td>
+            <td>36.5</td>
+            <td>−2.8</td>
+          </tr>
+          <tr>
+            <td>FOVEA‑GUI (crop region 1/16)</td>
+            <td>32.1</td>
+            <td>−7.2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        <strong>Case Study.</strong> 
+        The qualitative analysis below demonstrates how FOVEA‑GUI intelligently decides when to zoom for better grounding.
+        In (b), the down‑sampled model fails due to missing fine‑grained details. In contrast, (a) shows FOVEA‑GUI proactively invoking 
+        the tool to crop the correct sub‑region, recovering essential context and producing the right answer.
+      </p>
+
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-half">
+          <figure class="has-text-centered">
+            <img src="static/images/case_study_success.png" alt="Case Study - Successful Tool Use">
+            <figcaption>(a) Successful case: FOVEA‑GUI zooms in and correctly grounds the target.</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half">
+          <figure class="has-text-centered">
+            <img src="static/images/case_study_failure.png" alt="Case Study - Failure without tool">
+            <figcaption>(b) Failure case: Down‑sampled model loses detail and fails to ground correctly.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <p>
+        Overall, these findings confirm that <strong>FOVEA‑GUI</strong> learns dynamic, foresight‑based resolution control — 
+        minimizing tool usage when global observation suffices, and invoking the zoom‑in tool for detailed visual reasoning when necessary.
+      </p>
+    </div>
+  </div>
+</section>
+
+  
+
 <!-- 🔹 7️⃣ Resources -->
 <section id="Resources" class="section is-light">
   <div class="container is-max-desktop has-text-centered">
