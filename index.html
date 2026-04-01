@@ -213,61 +213,6 @@
       </figure>
     </div>
   </div>
-</section><!-- Results -->
-<section id="Results" class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Results</h2>
-
-    <div class="content has-text-justified">
-      <p>
-        We evaluate <strong>FOVEA‑GUI</strong> on five diverse GUI grounding benchmarks — 
-        <em>ScreenSpot‑v2</em>, <em>ScreenSpot‑Pro</em>, <em>OSWorld‑G</em>, <em>UI‑Vision</em>, and <em>MMBench‑GUI</em>. 
-        These datasets cover dense layouts, icon ambiguities, and small‑text challenges.
-      </p>
-      <p>
-        <strong>FOVEA‑GUI achieves the best accuracy–efficiency trade‑off</strong>, outperforming all static compression baselines 
-        (FastV, SparseVLM, MVP) while using up to <strong>53% fewer visual tokens</strong>. 
-        The learned high‑resolution policy dynamically switches between global perception and selective zoom‑in reasoning, 
-        adapting resolution cost to task complexity.
-      </p>
-      <p>
-        On the professional‑grade <strong>ScreenSpot‑Pro (4K)</strong> benchmark, 
-        FOVEA‑GUI attains the <strong>highest accuracy</strong> using only <strong>47% token budget</strong>, 
-        demonstrating that targeted zoom‑in crops outperform full‑image high‑resolution processing.
-        In <strong>UI‑Vision</strong> — which involves 83 apps and multi‑domain layouts — 
-        FOVEA‑GUI consistently surpasses baselines across both dense and spatial instructions.
-      </p>
-      <p>
-        Despite its dynamic dual‑phase logic, 
-        <strong>FOVEA‑GUI reduces end‑to‑end inference latency</strong> compared with vanilla full‑resolution models,
-        proving that adaptive evidence acquisition leads to faster, more efficient GUI reasoning.
-      </p>
-    </div>
-
-    <!-- Figures in single-column layout -->
-    <div class="content has-text-centered mt-6">
-      <figure class="mb-5">
-        <img src="static/images/perf_comp.png" alt="Benchmark Comparison" style="max-width:85%;">
-        <figcaption class="mt-2">
-          <em>Accuracy–Efficiency comparison across GUI tasks.</em>
-        </figcaption>
-      </figure>
-
-      <figure class="mb-5">
-        <img src="static/images/intro_redundancy.png" alt="ScreenSpot‑Pro Results" style="max-width:85%;">
-        <figcaption class="mt-2">
-          <em>ScreenSpot‑Pro (4K): FOVEA‑GUI reaches top accuracy with 47% tokens.</em>
-        </figcaption>
-      </figure>
-
-      <figure class="mb-5">
-        <img src="static/images/inference_time.png" alt="Inference Time" style="max-width:85%;">
-        <figcaption class="mt-2">
-          <em>FOVEA‑GUI achieves lower inference latency compared with vanilla models.</em>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
 </section>
 
 
